@@ -20,7 +20,7 @@ enddate.strftime("%Y-%m-%d %H:%M:%S")
 # print("end",enddate)
 
 #url
-getter=f"https://api.twelvedata.com/time_series?apikey=e76157c75c3a42649e168c5c206e88ca&interval=1h&start_date=2024-02-12 19:31:00&end_date=2024-02-13 19:31:00&format=JSON&symbol=BTC/USD&outputsize=10"
+getter=f"https://api.twelvedata.com/time_series?apikey=e76157c75c3a42649e168c5c206e88ca&interval=1h&start_date={startdate}&end_date={enddate}&format=JSON&symbol=BTC/INR&outputsize=10"
 
 #getting api response
 response = requests.get(getter).json()
