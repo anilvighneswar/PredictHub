@@ -41,7 +41,7 @@ model.add(Dense(1,activation='sigmoid'))
 model.compile(loss='mean_squared_error',optimizer='adam',metrics=['accuracy'])
 model.fit(x_train,y_train,epochs=10,batch_size=30)
 
-testapi='https://api.twelvedata.com/time_series?symbol=BTC/INR&interval=5min&outputsize=3000&apikey=e76157c75c3a42649e168c5c206e88ca'
+testapi='https://api.twelvedata.com/time_series?symbol=BTC/INR&interval=5min&outputsize=3000&apikey=%api%key'
 testdata=requests.get(testapi).json()
 testdatafinal=pd.DataFrame(testdata['values'])
 
