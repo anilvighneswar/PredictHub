@@ -10,7 +10,7 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense,Dropout
 from tensorflow.keras.layers import LSTM
 
-data=requests.get('https://api.twelvedata.com/time_series?symbol=BTC/INR&interval=5min&outputsize=5000&apikey=e76157c75c3a42649e168c5c206e88ca').json()
+data=requests.get('https://api.twelvedata.com/time_series?symbol=BTC/INR&interval=5min&outputsize=5000&apikey=%api%key').json()
 data_final=pd.DataFrame(data['values'])
 print(data_final)
 scaler=MinMaxScaler(feature_range=(0,1))
